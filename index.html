@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To do list</title>
+  <link rel="stylesheet" href="./vendors/fontawesome/css/all.css">
+  <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+ <div class="centrer">
+    <div class="row justify-content-center">
+        <header class="col-lg-4 card bg-white rounded-3 me-3">
+            <div class="card-body container">
+              <!--Formulaire-->
+              <div class="row">
+                <form id="addTodo" class="row g-3 needs-validation" novalidate>
+                    <h2 class="h4">Nouvelle tâche</h2>
+                  <div class="col-lg-12">
+                    <label for="Tasks" class="form-label">Tâche à faire</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text" id="inputGroupPrepend"><i class="fa fa-tasks"></i></span>
+                      <input type="text" name="Tasks" class="form-control" id="Tasks" aria-describedby="inputGroupPrepend" required>
+                      <div class="invalid-feedback">
+                        Remplir ce champs
+                      </div>
+                    </div>
+                  </div>
+                  <!-- -->
+                  <div class="col-lg-6">
+                    <label for="DateTasks" class="form-label">Date de realisation</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text" id="inputGroupPrepend"><i class="fa fa-calendar"></i></span>
+                      <input type="date" class="form-control" id="DateTasks" aria-describedby="inputGroupPrepend" required>
+                      <div class="invalid-feedback">
+                        Remplir ce champs
+                      </div>
+                    </div>
+                  </div>
+                  <!-- -->
+                  <div class="col-lg-6">
+                    <label for="DeadlineTasks" class="form-label">Deadline</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text" id="inputGroupPrepend"><i class="fa fa-calendar"></i></span>
+                      <input type="date" class="form-control" id="DeadlineTasks" aria-describedby="inputGroupPrepend" required>
+                      <div class="invalid-feedback">
+                        Remplir ce champs
+                      </div>
+                    </div>
+                  </div>
+                  <!-- -->
+                  <div class="col-lg-12">
+                    <label for="ResponsableTasks" class="form-label">Responsable</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text" id="inputGroupPrepend"><i class="fa fa-user"></i></span>
+                      <input type="text" class="form-control" id="ResponsableTasks" aria-describedby="inputGroupPrepend" required>
+                      <div class="invalid-feedback">
+                        Remplir ce champs
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-lg-12 pt-3">
+                    <p id="message"></p>
+                  </div>
+        
+                  <div class="col-lg-12">
+                    <button class="btn btn-success btn-sm" type="submit">Ajouter cette tâche</button>
+                  </div>
+        
+                </form>
+              </div>
+            </div>
+          </header>
+        
+          <div class="col-lg-7 card bg-white rounded-3">
+            <div class="card-body">
+                <h2 class="h4">Liste des tâches</h2>
+            <hr>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                      <tr class="bg-primary">
+                        <th scope="col">N°</th>
+                        <th scope="col">Tâche</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Deadline</th>
+                        <th scope="col">Responsable</th>
+                        <th scope="col">Statut</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody id="ListeTasks"></tbody>
+                  </table>
+            </div>
+            </div>
+        </div>
+    </div>
+ </div>
+
+  <script src="./vendors/bootstrap/js/bootstrap.bundle.js"></script>
+
+  <!--Notre script-->
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
